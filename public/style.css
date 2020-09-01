@@ -1,0 +1,96 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: verdana, sans-serif;
+}
+
+body {
+    color: var(--color-font);
+    background-color: #1a1a1a;
+}
+
+:root {
+    --color-primary: #188fff;
+    --color-secondary: #0058db;
+    --color-font: #d6d6d6;
+    --color-background: #272727;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    display: grid;
+    background-color: var(--color-background);
+}
+
+nav.menu {
+    justify-self: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav.menu a {
+    text-decoration: none;
+    color: var(--color-font);
+    transition: ease-in-out 100ms;
+}
+
+nav.menu a:hover {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.me {
+    width: 100%;
+    display: grid;
+}
+
+.me img {
+    width: 300px;
+    margin: 30px 0;
+
+    justify-self: center;
+
+    border: 6px solid var(--color-primary);
+    border-radius: 50%;
+}
+
+.me h1 {
+    justify-self: center;
+    font-size: 40px;
+}
+
+.me span {
+    margin-top: 10px;
+    justify-self: center;
+    font-size: 25px;
+}
+
+.me p {
+    width: 600px;
+    margin-top: 40px;
+
+    justify-self: center;
+
+    text-align: center;
+    font-size: 18px;
+}
+
+.socialNetwork {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    justify-content: center;
+}
+
+.socialNetwork a {
+    margin: 50px 0 30px 0;
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: ease-in-out 100ms;
+}
+
+.socialNetwork a:hover {
+    color: var(--color-secondary);
+}
