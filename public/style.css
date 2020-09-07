@@ -41,6 +41,15 @@ nav.menu a:hover {
     color: var(--color-primary);
 }
 
+.wrapper {
+    width: 100%;
+}
+
+.wrapper h1 {
+    padding: 20px 0;
+    text-align: center;
+}
+
 .me {
     width: 100%;
     display: grid;
@@ -93,4 +102,86 @@ nav.menu a:hover {
 
 .socialNetwork a:hover {
     color: var(--color-secondary);
+}
+
+/* ======================= CARDS ======================= */
+
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.card_image-container img {
+    width: 100%;
+}
+
+.card_content,
+.card_info {
+    padding: 24px;
+}
+
+.card_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card_price {
+    background-color: var(--color-secondary);
+    filter: brightness(130%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* ======================= MODAL OVERLAY ======================= */
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0;
+    visibility: hidden;
+    
+    transition: ease-in-out 200ms;
+}
+
+.modal {
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+    background-color: #fff;
+}
+
+.modal .close-modal {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+/* ======================= MODAL ACTIVE ======================= */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
 }
