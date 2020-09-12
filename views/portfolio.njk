@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends "layout.njk" %}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu Perfil</title>
-
-    <!-- Style -->
-    <link rel="stylesheet" href="style.css" />
+{% block head %}
+    <title>Playlist</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"/>
-</head>
+{% endblock head %}
 
-<body>
-    <header>
-        <nav class="menu">
-            <a href="/">Sobre</a>
-            <span class="space">|</span>
-            <a href="/portfolio">Aulas</a>
-        </nav>
-    </header>
+{% block content %}
 
     <div class="wrapper">
         <h1>Aulas</h1>
@@ -118,6 +105,5 @@
     </div>
 
     <script src="script.js"></script>
-</body>
-
-</html>
+    
+{% endblock content %}

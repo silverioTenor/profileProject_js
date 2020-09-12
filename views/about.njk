@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Meu Perfil</title>
+{% extends "layout.njk" %}
 
-    <!-- Style -->
-    <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-    <header>
-        <nav class="menu">
-            <a href="/">Sobre</a>
-            <span class="space">|</span>
-            <a href="/portfolio">Aulas</a>
-        </nav>
-    </header>
+{% block content %}
 
     <section>
         <div class="me">
@@ -35,5 +20,5 @@
             <a href="https://www.linkedin.com/in/rodrigo-silverio-659502139/" target="_blank">LinkedIn</a>
         </div>
     </section>
-</body>
-</html>
+    
+{% endblock content %}
