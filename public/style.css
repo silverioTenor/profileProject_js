@@ -115,6 +115,7 @@ nav.menu a:hover {
 }
 
 .card {
+    display: grid;
     background-color: var(--color-primary);
     cursor: pointer;
 }
@@ -130,6 +131,7 @@ nav.menu a:hover {
 
 .card_info {
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
 }
 

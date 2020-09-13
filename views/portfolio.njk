@@ -2,8 +2,7 @@
 
 {% block head %}
     <title>Playlist</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 {% endblock head %}
 
 {% block content %}
@@ -13,83 +12,24 @@
     </div>
 
     <section class="cards">
-        <div class="card" id="fzxag7U3Snk">
-            <div class="card_image-container">
-                <img src="https://img.youtube.com/vi/fzxag7U3Snk/maxresdefault.jpg"/>
-            </div>
-            <div class="card_content">
-                <p>Gnarls Barkley - Crazy (Cover) by Daniela Andrade</p>
-            </div>
-            <div class="card_info">
-                <p>04:03</p>
-                <p class="card_price">Free</p>
-            </div>
-        </div>
 
-        <div class="card" id="kOy2Lt2-foU">
-            <div class="card_image-container">
-                <img src="https://img.youtube.com/vi/kOy2Lt2-foU/maxresdefault.jpg"/>
-            </div>
-            <div class="card_content">
-                <p>For You (Fifty Shades Freed)</p>
-            </div>
-            <div class="card_info">
-                <p>04:02</p>
-                <p class="card_price">Free</p>
-            </div>
-        </div>
+        {% for item in items %}
 
-        <div class="card" id="iEXU3U6hw7o">
-            <div class="card_image-container">
-                <img src="https://img.youtube.com/vi/iEXU3U6hw7o/maxresdefault.jpg"/>
+            <div class="card" id="{{ item.id }}">
+                <div class="card_image-container">
+                    <img src="https://img.youtube.com/vi/{{ item.id }}/maxresdefault.jpg" alt="{{ item.title }}"/>
+                </div>
+                <div class="card_content">
+                    <p>{{ item.title }}</p>
+                </div>
+                <div class="card_info">
+                    <p>{{ item.duration }}</p>
+                    <p class="card_price">{{ item.price }}</p>
+                </div>
             </div>
-            <div class="card_content">
-                <p>Death Bed</p>
-            </div>
-            <div class="card_info">
-                <p>01:36</p>
-                <p class="card_price">Free</p>
-            </div>
-        </div>
 
-        <div class="card" id="VWN5logHdTU">
-            <div class="card_image-container">
-                <img src="https://img.youtube.com/vi/VWN5logHdTU/maxresdefault.jpg"/>
-            </div>
-            <div class="card_content">
-                <p>Richard Grey & Gary Caos - SOS Richard ( Grey Deep Deep Mix )</p>
-            </div>
-            <div class="card_info">
-                <p>05:18</p>
-                <p class="card_price">Free</p>
-            </div>
-        </div>
+        {% endfor %}
 
-        <div class="card" id="8xlDwukxjnA">
-            <div class="card_image-container">
-                <img src="https://img.youtube.com/vi/8xlDwukxjnA/maxresdefault.jpg"/>
-            </div>
-            <div class="card_content">
-                <p>Ship Wrek & Zookeepers - Ark [NCS Release]</p>
-            </div>
-            <div class="card_info">
-                <p>02:59</p>
-                <p class="card_price">Free</p>
-            </div>
-        </div>
-
-        <div class="card" id="hdO9cc7WOyE">
-            <div class="card_image-container">
-                <img src="https://img.youtube.com/vi/hdO9cc7WOyE/maxresdefault.jpg"/>
-            </div>
-            <div class="card_content">
-                <p>Rihanna - Towards The Sun (Lyric Video)</p>
-            </div>
-            <div class="card_info">
-                <p>03:48</p>
-                <p class="card_price">Free</p>
-            </div>
-        </div>
     </section>
 
     <div class="modal-overlay">
@@ -105,5 +45,5 @@
     </div>
 
     <script src="script.js"></script>
-    
+
 {% endblock content %}
