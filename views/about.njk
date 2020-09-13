@@ -4,21 +4,19 @@
 
     <section>
         <div class="me">
-            <img src="img/luffy.jpg"/>
+            <img src="img/{{ data.photo }}"/>
 
-            <h1>Rodrigo Silvério</h1>
-            <span>Desenvolvedor Full-Stack</span>
+            <h1>{{ data.name }}</h1>
+            <span>{{ data.job }}</span>
 
-            <p>
-                Focado nas melhores tecnologias para o desenvolvimento de aplicações web e mobile, afim de trazer a melhor experiência para o usuário.
-            </p>
+            <p>{{ data.description }}</p>
         </div>
 
         <div class="socialNetwork">
-            <a href="https://github.com/silverioTenor/" target="_blank">Github</a>
-            <a href="https://twitter.com/silverio_tenor" target="_blank">Twitter</a>
-            <a href="https://www.linkedin.com/in/rodrigo-silverio-659502139/" target="_blank">LinkedIn</a>
+            {% for link in links %}
+                <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+            {% endfor %}
         </div>
     </section>
-    
+
 {% endblock content %}
