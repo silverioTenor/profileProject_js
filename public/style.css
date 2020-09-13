@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
-    font-family: verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -120,8 +122,29 @@ nav.menu a:hover {
     cursor: pointer;
 }
 
+.featured-wrapper.card_image-container {
+    position: relative;
+}
+
 .card_image-container img {
     width: 100%;
+}
+
+.featured {
+    padding: 5px 10px;
+
+    position: absolute;
+    top: -10px;
+    right: 10px;
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+
+    color: #272727;
+    background-color: #c5c200;
+
+    border-radius: 30px;
 }
 
 .card_content,
