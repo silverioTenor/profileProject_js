@@ -1,10 +1,10 @@
-const express = require('express')
+const express = require('express');
 const nunjucks = require('nunjucks')
 
-const server = express()
-const videos = require("./data")
+const server = express();
+const videos = require("./data");
 
-server.use(express.static('public'))
+server.use(express.static('public'));
 
 server.set("view engine", "njk")
 
@@ -12,7 +12,7 @@ nunjucks.configure("views", {
     express: server,
     autoescape: false,
     noCache: true
-})
+});
 
 server.get("/", (req, res) => {
     const data = {
@@ -20,7 +20,7 @@ server.get("/", (req, res) => {
         job: "Desenvolvedor Full-Stack",
         photo: "luffy.jpg",
         description: "Focado nas melhores tecnologias para o desenvolvimento de aplicações web e mobile, afim de trazer a melhor experiência para o usuário."
-    }
+    };
 
     const social = [
         {
@@ -35,20 +35,20 @@ server.get("/", (req, res) => {
             name: "linkedIn",
             url: "https://www.linkedin.com/in/rodrigo-silverio-659502139/"
         }
-    ]
+    ];
 
     return res.render("about", { data, links: social })
 });
 
-server.get("/portfolio", (req, res) => res.render("portfolio", { items: videos }))
+server.get("/portfolio", (req, res) => res.render("portfolio", { items: videos }));
 
 server.get("/video", (req, res) => {
-    const id = req.query.id
+    const id = req.query.id;
 
-    const video = videos.find(video => video.id == id)
+    const video = videos.find(video => video.id == id);
 
-    return (!video) ? res.send("Video not found!") : res.render("video", { item: video })
+    return (!video) ? res.send("Video not found!") : res.render("video", { item: video });
 
-})
+});
 
-server.listen(3000, () => console.log("Server is running..."))
+server.listen(3000, () => console.log("Server is running..."));
